@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Green background for profitable rides (> ₹6/km)
+    Semi-transparent with rounded corners
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    
+    <solid android:color="#CC00C853" />
+    
+    <corners android:radius="16dp" />
+    
+    <stroke
+        android:width="4dp"
+        android:color="#FFFFFF" />
+    
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+</shape>
