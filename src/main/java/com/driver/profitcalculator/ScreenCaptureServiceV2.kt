@@ -70,8 +70,13 @@ class ScreenCaptureServiceV2 : Service() {
         val resultCode = intent?.getIntExtra("resultCode", Activity.RESULT_CANCELED) ?: Activity.RESULT_CANCELED
         val data = intent?.getParcelableExtra<Intent>("data")
         
-        if (resultCode == Activity.RESULT_OK && data != null) {
-            startForeground(NOTIFICATION_ID, createNotification())
+       if (resultCode == Activity.RESULT_OK && data != null) {
+            // Android 14 Strict Security Fix
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                startForeground(NOTIFICATION_ID, createNotification(), android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION)
+            } else {
+                startForeground(NOTIFICATION_ID, createNotification())
+            }
             initMediaProjection(resultCode, data)
             startCaptureLoop()
         } else {
