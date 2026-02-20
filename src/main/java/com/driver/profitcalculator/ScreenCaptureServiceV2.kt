@@ -277,7 +277,7 @@ class ScreenCaptureServiceV2 : Service() {
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("Silent Eye Active")
             .setContentText("Analyzing fares...")
-            .setSmallIcon(R.drawable.ic_notification)
+            .setSmallIcon(android.R.drawable.ic_menu_camera)
             .setContentIntent(pendingIntent)
             .setOngoing(true)
             .setSilent(true)
