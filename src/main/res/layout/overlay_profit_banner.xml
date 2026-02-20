@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Ghost Hologram Overlay Layout
+    - Massive banner for visibility
+    - Semi-transparent background
+    - FLAG_NOT_TOUCHABLE in code makes this click-through
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlayContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_profit_green">
+
+    <TextView
+        android:id="@+id/profitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="RAPIDO: ₹7.5/km"
+        android:textColor="#FFFFFF"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing="0.05" />
+
+</FrameLayout>
