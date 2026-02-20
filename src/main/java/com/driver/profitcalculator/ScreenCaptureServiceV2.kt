@@ -20,6 +20,7 @@ import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import kotlinx.coroutines.*
+import kotlinx.coroutines.tasks.await
 import java.nio.ByteBuffer
 
 /**
