@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startCaptureService(resultCode: Int, data: Intent) {
-        val serviceIntent = Intent(this, ScreenCaptureService::class.java).apply {
+        val serviceIntent = Intent(this, ScreenCaptureServiceV2::class.java).apply {
             putExtra("resultCode", resultCode)
             putExtra("data", data)
         }
@@ -108,13 +108,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun stopService() {
-        stopService(Intent(this, ScreenCaptureService::class.java))
+        stopService(Intent(this, ScreenCaptureServiceV2::class.java))
         Toast.makeText(this, "Profit calculator stopped", Toast.LENGTH_SHORT).show()
         updateButtonStates()
     }
 
     private fun updateButtonStates() {
-        val isRunning = isServiceRunning(ScreenCaptureService::class.java)
+        val isRunning = isServiceRunning(ScreenCaptureServiceV2::class.java)
         startButton.isEnabled = !isRunning
         stopButton.isEnabled = isRunning
     }
