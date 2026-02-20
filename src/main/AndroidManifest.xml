@@ -46,7 +46,7 @@
             Captures screen at 2 FPS, processes with ML Kit
         -->
         <service
-            android:name=".ScreenCaptureService"
+            android:name=".ScreenCaptureServiceV2"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="mediaProjection"
